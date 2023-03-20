@@ -30,41 +30,6 @@
 		</div>
 	</body>
 	
-	<div id="piaofudiv" style="position:absolute; width:300px; z-index:999999;" οnmοuseοver="piao_pause()" οnmοuseοut="piao_resume()">
-        <div style="text-align:right"><a href="#" οnclick="piao_close()"></a></div>
-        <a href="love.html"><img src="love.png" width="150" height="150" style="border:none;" /></a>
-    </div>
-    <script>
-        var piaofudivid = document.getElementById("piaofudiv");
-        var xPos = 0;
-        var yPos = 0;
-        var x_fx = 1;
-        var y_fx = 1;
-        function piao_start() {
-            if (xPos <= 0)
-                x_fx = 1;
-            if (yPos <= 0)
-                y_fx = 1;
-            if (xPos >= document.documentElement.clientWidth - piaofudivid.clientWidth)
-                x_fx = -1;
-            if (yPos >= document.documentElement.clientHeight - piaofudivid.clientHeight)
-                y_fx = -1;
-            xPos += x_fx;
-            yPos += y_fx;
-            piaofudivid.style.left = (xPos + document.documentElement.scrollLeft) + "px";
-            piaofudivid.style.top = (yPos + document.documentElement.scrollTop) + "px";
-        }
-        function piao_pause() {
-            clearInterval(piao_time);
-        }
-        function piao_resume() {
-            piao_time = setInterval("piao_start()", 30);    // 修改30调节漂动的速度
-        }
-        function piao_close() {
-            clearInterval(piao_time);
-            piaofudivid.style.display = "none";
-        }
-        piao_resume();
-    </script>
+
 	
 </html>
